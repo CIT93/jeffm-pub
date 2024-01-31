@@ -1,41 +1,38 @@
-function determineHouseHoldPts(numberInHousehold) {
-    console.log("Inside the function");
-    
-    
-      if (numberInHousehold === 1) {
-         carbonFootprintPoints = carbonFootprintPoints + 14;
-    } else if(numberInHousehold === 2) {
-        carbonFootprintPoints = carbonFootprintPoints + 12;
-      } else if(numberInHousehold === 3) {
-        carbonFootprintPoints = carbonFootprintPoints + 10;
-      } else if(numberInHousehold === 4) {
-        carbonFootprintPoints = carbonFootprintPoints + 8;
-      } else if(numberInHousehold === 5) {
-        carbonFootprintPoints = carbonFootprintPoints + 6;
-      } else if(numberInHousehold === 6) {
-        carbonFootprintPoints = carbonFootprintPoints + 4;
-      } else if (numberInHousehold > 6) { 
-        carbonFootprintPoints = carbonFootprintPoints + 2;
-      }
-    
-      console.log('Based on the number of member of the household of ${numberInhousehold} the points would be ${carbonFootprintPoints}.');
-    
+function calcFootprints() {
+    let footprintPts = 0;
+  
+    // set variable to the numberInHousehold input value
+    const numberInHousehold = parseInt(
+      document.getElementById("numberInHousehold").value
+    );
+  
+    // set variable to houseSize select value
+    const houseSize = document.getElementById("houseSize").value;
+  
+    // create function to calculate footprint pts per numberInHousehold input value
+    if (numberInHousehold <= 6) {
+      footprintPts = 16 - numberInHousehold * 2;
+      document.getElementById("results").textContent = footprintPts;
+    } else {
+      footprintPts = 2;
+      document.getElementById("results").textContent = footprintPts;
     }
-    
-    let carbonFootprintPoints = 0;
-    //const numberInHousehold = 3;
-    
-    // need to keep working on this
-    // global scope
-    
-    determineHouseHoldPts(3)
-    determineHouseHoldPts(4)
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  
+    // create function to calculate footprint pts per houseSize selection
+    if (houseSize == "apartment") {
+      footprintPts = footprintPts + 2;
+    } else if (houseSize == "small") {
+      footprintPts = footprintPts + 4;
+    } else if (houseSize == "medium") {
+      footprintPts = footprintPts + 7;
+    } else if (houseSize == "large") {
+      footprintPts = footprintPts + 10;
+    }
+    document.getElementById("results").textContent = footprintPts;
+  }
+  
+  // create function to set all fields when butto clicked
+  function resetForm() {
+    document.getElementById("results").textContent = 0;
+  }
+  
