@@ -25,7 +25,7 @@ function determineHouseHoldPts(numberInHousehold) {
     let carbonFootprintPoints = 0;
     //const numberInHousehold = 3;
     
-    
+    // need to keep working on this
     // global scope
     
     determineHouseHoldPts(3)
