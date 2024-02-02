@@ -1,38 +1,40 @@
-function calcFootprints() {
-    let footprintPts = 0;
-  
-    // set variable to the numberInHousehold input value
-    const numberInHousehold = parseInt(
-      document.getElementById("numberInHousehold").value
-    );
-  
-    // set variable to houseSize select value
-    const houseSize = document.getElementById("houseSize").value;
-  
-    // create function to calculate footprint pts per numberInHousehold input value
-    if (numberInHousehold <= 6) {
-      footprintPts = 16 - numberInHousehold * 2;
-      document.getElementById("results").textContent = footprintPts;
-    } else {
-      footprintPts = 2;
-      document.getElementById("results").textContent = footprintPts;
-    }
-  
-    // create function to calculate footprint pts per houseSize selection
-    if (houseSize == "apartment") {
-      footprintPts = footprintPts + 2;
-    } else if (houseSize == "small") {
-      footprintPts = footprintPts + 4;
-    } else if (houseSize == "medium") {
-      footprintPts = footprintPts + 7;
-    } else if (houseSize == "large") {
-      footprintPts = footprintPts + 10;
-    }
-    document.getElementById("results").textContent = footprintPts;
-  }
-  
-  // create function to set all fields when butto clicked
-  function resetForm() {
-    document.getElementById("results").textContent = 0;
-  }
-  
+function determineHouseSizePts(size) {
+    if (size === "large") {
+        carbonFootprintPoints = cardonFootprintPoints + 10
+} else if (size === "meduim") {
+    carbonFootprintPoints = carbonFootprintPoints + 7
+} else; if (size === "small") {
+ carbonFootprintsPoints = carbonFootprintPoints + 4
+} else if (size === "apt") {
+    cabonFootprintPoints = carbonFootprintPoints + 2
+}
+}
+
+function determineHouseHoldPts(numberInHouseHold) {
+    console.log("Inside the function")
+    if (numberInHousehold === 1) {
+        cardonFootprintPoints = carbonFootprintPoints + 14
+} else if (nuberInHousehold === 2) {
+    carbonFootprintPoints = carbonFootprintPoints = 12
+} else if (nuberInHousehold === 3) {
+    carbonFootprintPoints = carbonFootprintPoints + 10
+} else if (numberInHousehold === 4) {
+    carbonFootprintPoints = carbonFootprintPoints + 8
+} else if (numberInHousehold === 5) {
+    carbonFootprintPoints = carbonFootprintPoints + 6
+} else if (numberInHousehold === 6) {
+    carbonFootprintPoints = carbonFootprintPoints + 4
+} else if (numberInHousehold > 6) {
+carbonFootprintPoints = carbonFootprintPoints + 2
+}
+console.log(
+    'Based on the number of members in the household of ${numberInHousehold} the points would be ${carbonFootprintPoints}.'
+)
+}
+
+let carbonFootprintPoints = 0
+
+// global scope
+
+determineHouseHoldPts(5);
+determineHouseHoldPts("apt");
