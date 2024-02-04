@@ -42,11 +42,23 @@ function start(houseHoldMembers, houseSize) {
 }
 
 function displayOutput() {
+  for (arr of cfpData){
+    console.log(arr);
+    const output = document.getElementById("output");
+    const newP = document.createElement("p");
+    (newP.textContent = `HouseHold Size Points is ${arr[3]}. Household Member Points is ${arr[2]}. The Carbon Footprint total is ${arr[4]}`)
+    output.appendChild(newP);
+  }
+
 
 }
 
-start(5, "apt");
-start(4, "large");
-start(3, "meduim");
+
+start(5, "apartment");
+start(2, "medium");
+start(3, "large");
+
+
+
 
 displayOutput()
