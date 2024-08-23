@@ -1,4 +1,3 @@
-console.log("Hello from inside the main.js file");
 
 // let myVar;
 
