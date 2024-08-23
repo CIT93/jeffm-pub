@@ -17,9 +17,3 @@ function runNow() {
 
 runNow();
 runNow();
-
-
-// to update html with total (const carbonPrintTotal)
-const myVar = document.querySelector("h2");
-// to update index.html
-myVar.textContent = myVarType;
