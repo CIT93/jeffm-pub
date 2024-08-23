@@ -4,7 +4,7 @@ console.log("Hello from inside the main.js file");
 
 const myVar = "46";
 const myVarType = typeof myVar;
-console.log("myVarType " = myVarType);
+console.log("myVarType " + myVarType);
 console.log(`myVarType ${myVarType}`);
 
 function runNow() {
