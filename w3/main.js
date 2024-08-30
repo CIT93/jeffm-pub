@@ -40,4 +40,4 @@ console.log(`Based on the number of member of the household of ${numberInHouseho
   determineHouseHoldPts(7);
   determineHouseHoldPts(10);
 
-//working code
+//working code 7 or more will add 2 points
