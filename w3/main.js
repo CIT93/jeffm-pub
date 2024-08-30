@@ -1,18 +1,27 @@
+function determineHouseHoldPts(numberInHousehold) {
+console.log("Inside the function")
 
-// let myVar;
-
-const myVar = "46";
-const myVarType = typeof myVar;
-console.log("myVarType " + myVarType);
-console.log(`myVarType ${myVarType}`);
-
-function runNow() {
-    if (myVarType === "number") {
-        console.log(`Will this one not run?`);
-    } else {
-        console.log(`Will this one run?`);
-    }
+if (numberInHousehold === 1) {
+  carbonFootPrintPoints = carbonFootPrintPoints + 14;
+} else if (numberInHousehold === 2) {
+  carbonFootPrintPoints = carbonFootPrintPoints + 12;
+} else if (numberInHousehold === 3) {
+  carbonFootPrintPoints = carbonFootPrintPoints + 10;
+} else if (numberInHousehold === 4) {
+  carbonFootPrintPoints = carbonFootPrintPoints + 8;
+} else if (numberInHousehold === 5) {
+  carbonFootPrintPoints = carbonFootPrintPoints + 6;
+} else if (numberInHousehold === 6) {
+  carbonFootPrintPoints = carbonFootPrintPoints + 4;
+} else if (numberInHousehold > 6) {
+  carbonFootPrintPoints = carbonFootPrintPoints + 2;
 }
 
-runNow();
-runNow();
+console.log(`Based on the number of member of the household of ${numberInHousehold} the points would be ${carbonFootPrintPoints}.`);
+}
+
+
+
+let carbonFootPrintPoints = 0;
+//const numberInHousehold = 3;
+
