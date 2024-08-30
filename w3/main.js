@@ -25,3 +25,9 @@ console.log(`Based on the number of member of the household of ${numberInHouseho
 let carbonFootPrintPoints = 0;
 //const numberInHousehold = 3;
 
+
+
+  // global scope
+
+  determineHouseHoldPts(3)
+  determineHouseHoldPts(4)
