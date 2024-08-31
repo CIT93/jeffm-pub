@@ -41,3 +41,26 @@ console.log(`Based on the number of member of the household of ${numberInHouseho
   determineHouseHoldPts(10);
 
 //working code 7 or more will add 2 points
+
+function determineHomeSizePts(homeSize) { 
+  console.log("Inside the function");
+  let homeSizePoints = 0;  // This variable is specific to home size points
+
+  if (homeSize === 'large') {
+      homeSizePoints = 10;
+  } else if (homeSize === 'medium') {
+      homeSizePoints = 7;
+  } else if (homeSize === 'small') {
+      homeSizePoints = 4;
+  } else if (homeSize === 'apartment') {
+      homeSizePoints = 2;
+  }
+
+  console.log(`Based on the size of the home (${homeSize}), the points would be ${homeSizePoints}.`);
+}
+
+// Example usage with different home sizes
+determineHomeSizePts('large');
+determineHomeSizePts('medium');
+determineHomeSizePts('small');
+determineHomeSizePts('apartment');
