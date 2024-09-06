@@ -51,6 +51,9 @@ function start(houseHoldMembers, houseSize) {
   ]);
 }
 
+
+
+
 function displayOutput() {
   for (arr of cfpData){
     console.log(arr)
