@@ -54,26 +54,27 @@ function start(houseHoldMembers, houseSize) {
 
 
 
-function displayOutput() {
-  for (arr of cfpData){
-    console.log(arr)
-    const output = document.getElementById("output");
-    const newP = document.createElement("p");
-    newP.textContent = `Carbon Footprint total is ${arr[4]}`;
-    output.appendChild(newP)
+function displayOutput() { 
+  for (arr of cfpData) {
+      const output = document.getElementById("output");
+      const newH2 = document.createElement("h2");
+      newH2.textContent = `Carbon Footprint ${arr[4]}`;
+      const newH3 = document.createElement("h3");
+      newH3.textContent = `Based on number and size of home`;
+      const newP = document.createElement("p");
+      newP.textContent = `This number is based on the number of people in the house of ${arr[0]} (score: ${arr[3]}), `;
+      newP.textContent += `and a ${arr[1]} size of home (score: ${arr[2]}).`;
+      output.appendChild(newH2);
+      output.appendChild(newH3);
+      output.appendChild(newP);
   }
 }
 
-start(5, "apt");
-start(4, "large");
-start(3, "meduim");
+
+start(2, "apt");
+start(10, "large");
 start(2, "small");
-start(7, "7 people or more");
-start(6, "6 people");
-start(5, "5 people");
-start(4, "4 people");
-start(3, "3 people");
-start(2, "2 people");
-start(1, "1 person");
+start(4, "meduim");
+
 
 displayOutput()
