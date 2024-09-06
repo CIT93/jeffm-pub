@@ -51,7 +51,15 @@ function start(houseHoldMembers, houseSize) {
   ]);
 }
 
-function displayOutput() {}
+function displayOutput() {
+  for (arr of cfpData){
+    console.log(arr)
+    const output = document.getElementById("output");
+    const newP = document.createElement("p");
+    newP.textContent = `Carbon Footprint total is ${arr[4]}`;
+    output.appendChild(newP)
+  }
+}
 
 start(5, "apt");
 start(4, "large");
@@ -65,4 +73,4 @@ start(3, "3 people");
 start(2, "2 people");
 start(1, "1 person");
 
-displayOutput();
+displayOutput()
