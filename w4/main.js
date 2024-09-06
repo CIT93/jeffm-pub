@@ -1,7 +1,7 @@
 const cfpData = [];
 
 function determineHouseSizePts(size) {
-  //let houseSizePoints = 0;
+  let houseSizePoints = 0;
   if (size === "large") {
     houseSizePoints = 10;
   } else if (size === "medium") {
@@ -11,12 +11,11 @@ function determineHouseSizePts(size) {
   } else if (size === "apt") {
     houseSizePoints = 2;
   }
-
   return houseSizePoints;
 }
 
 function determineHouseHoldPts(numberInHousehold) {
-  //let houseHoldPoints = 0;
+  let houseHoldPoints = 0;
   if (numberInHousehold === 1) {
     houseHoldPoints = 14;
   } else if (numberInHousehold === 2) {
@@ -32,30 +31,20 @@ function determineHouseHoldPts(numberInHousehold) {
   } else if (numberInHousehold > 6) {
     houseHoldPoints = 2;
   }
-
-  return houseHoldPoints;
+  return houseHoldPoints
 }
-
-//let carbonFootprintPoints = 0;
 
 function start(houseHoldMembers, houseSize) {
-  const houseHoldPTS = determineHouseHoldPts(houseHoldMembers);
-  const houseSizePTS = determineHouseHoldPts(houseSize);
-  const total = houseHoldPTS + houseSizePTS;
-  cfpData.push([
-    houseHoldMembers,
-    houseSize,
-    houseHoldPTS,
-    houseSizePTS,
-    total,
-  ]);
+ const houseHoldPTS = determineHouseHoldPts(houseHoldMembers);
+ const HouseSizePTS = determineHouseSizePts(houseSize);
+ const total = houseHoldPTS + HouseSizePTS;
+ cfpData.push([houseHoldMembers, houseSize, houseHoldPTS, HouseSizePTS, total]);
 }
-
-
 
 
 function displayOutput() { 
   for (arr of cfpData) {
+    console.log(arr);
       const output = document.getElementById("output");
       const newH2 = document.createElement("h2");
       newH2.textContent = `Carbon Footprint ${arr[4]}`;
@@ -70,11 +59,9 @@ function displayOutput() {
   }
 }
 
-
-start(2, "apt");
-start(10, "large");
+start(5, "apt");
+start(4, "large");
+start(3, "medium");
 start(2, "small");
-start(4, "meduim");
 
-
-displayOutput()
+displayOutput ()
