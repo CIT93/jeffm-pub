@@ -31,31 +31,36 @@ function determineHouseHoldPts(numberInHousehold) {
   } else if (numberInHousehold > 6) {
     houseHoldPoints = 2;
   }
-  return houseHoldPoints
+  return houseHoldPoints;
 }
 
 function start(houseHoldMembers, houseSize) {
- const houseHoldPTS = determineHouseHoldPts(houseHoldMembers);
- const HouseSizePTS = determineHouseSizePts(houseSize);
- const total = houseHoldPTS + HouseSizePTS;
- cfpData.push([houseHoldMembers, houseSize, houseHoldPTS, HouseSizePTS, total]);
+  const houseHoldPTS = determineHouseHoldPts(houseHoldMembers);
+  const HouseSizePTS = determineHouseSizePts(houseSize);
+  const total = houseHoldPTS + HouseSizePTS;
+  cfpData.push([
+    houseHoldMembers,
+    houseSize,
+    houseHoldPTS,
+    HouseSizePTS,
+    total,
+  ]);
 }
 
-
-function displayOutput() { 
+function displayOutput() {
   for (arr of cfpData) {
     console.log(arr);
-      const output = document.getElementById("output");
-      const newH2 = document.createElement("h2");
-      newH2.textContent = `Carbon Footprint ${arr[4]}`;
-      const newH3 = document.createElement("h3");
-      newH3.textContent = `Based on number and size of home`;
-      const newP = document.createElement("p");
-      newP.textContent = `This number is based on the number of people in the house of ${arr[0]} (score: ${arr[3]}), `;
-      newP.textContent += `and a ${arr[1]} size of home (score: ${arr[2]}).`;
-      output.appendChild(newH2);
-      output.appendChild(newH3);
-      output.appendChild(newP);
+    const output = document.getElementById("output");
+    const newH2 = document.createElement("h2");
+    newH2.textContent = `Carbon Footprint ${arr[4]}`;
+    const newH3 = document.createElement("h3");
+    newH3.textContent = `Based on number and size of home`;
+    const newP = document.createElement("p");
+    newP.textContent = `This number is based on the number of people in the house of ${arr[0]} (score: ${arr[3]}), `;
+    newP.textContent += `and a ${arr[1]} size of home (score: ${arr[2]}).`;
+    output.appendChild(newH2);
+    output.appendChild(newH3);
+    output.appendChild(newP);
   }
 }
 
@@ -64,4 +69,4 @@ start(4, "large");
 start(3, "medium");
 start(2, "small");
 
-displayOutput ()
+displayOutput();
