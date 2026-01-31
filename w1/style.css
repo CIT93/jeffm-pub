@@ -1,106 +1,26 @@
 body {
-  background: radial-gradient(circle at top, #0b0f2a, #02030a);
-  color: #dfe6ff;
-  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
-  text-align: center;
-  padding: 4rem 2rem;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #020b1c, #063a2a);
+  font-family: "Segoe UI", system-ui, sans-serif;
 }
 
-/* ====== H1: COSMIC NEON GRADIENT + GENTLE PULSE + SUBTLE WAVE ====== */
+/* H1 container */
 h1 {
-  font-size: 3.4rem;
+  font-size: 3rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
-  position: relative;
-  display: inline-block;
-  background: linear-gradient(120deg,
-    #d19fff,   /* Brighter Purple */
-    #b48cff,   /* Purple */
-    #ffea7a,   /* Bright Gold */
-    #3cff9a,   /* Neon Green */
-    #ff4a4a,   /* Bright Red */
-    #ffffff,
-    #d19fff
-  );
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: 
-    starlight 7s ease-in-out infinite,
-    neonPulse 4s ease-in-out infinite;
-  text-shadow: 0 0 12px rgba(60, 255, 160, 0.45), 
-               0 0 20px rgba(255, 234, 122, 0.3);
-  overflow: hidden;
+  letter-spacing: 0.15em;
 }
 
-/* Spiral glitter overlay (subtle wobble) */
-h1::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    conic-gradient(
-      from 0deg,
-      transparent 0deg,
-      rgba(255,234,122,0.6) 30deg,  /* Gold spark */
-      transparent 60deg,
-      rgba(209,159,255,0.6) 120deg, /* Neon Purple spark */
-      transparent 180deg,
-      rgba(60,255,154,0.6) 240deg,  /* Neon Green spark */
-      transparent 300deg
-    );
-  mix-blend-mode: screen;
-  opacity: 0.55;
-  animation: spiralWave 6s ease-in-out infinite;
-  pointer-events: none;
-}
-
-/* ====== Paragraph: COSMIC LIQUID METAL ====== */
-p {
-  max-width: 720px;
-  margin: 2rem auto;
-  font-size: 1.25rem;
-  line-height: 1.7;
-  background: linear-gradient(120deg,
-    #f7f0ff,   /* Lighter Purple */
-    #c9a6ff,   /* Purple */
-    #ffffff,   /* White */
-    #ffe97a,   /* Gold */
-    #3cffc7,   /* Neon Green */
-    #ff5a5a,   /* Neon Red */
-    #9fa6c7,
-    #f7f0ff
-  );
-  background-size: 350% 350%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: alloyFlow 9s linear infinite;
-  filter: drop-shadow(0 0 6px rgba(160,255,200,0.35));
-}
-
-/* ====== Animations ====== */
-@keyframes starlight {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Spiral glitter barely wobbles up/down */
-@keyframes spiralWave {
-  0%   { transform: rotate(-1deg) scale(1.2); }
-  25%  { transform: rotate(0.5deg) scale(1.202); }
-  50%  { transform: rotate(-0.7deg) scale(1.2); }
-  75%  { transform: rotate(0.4deg) scale(1.202); }
-  100% { transform: rotate(-1deg) scale(1.2); }
-}
-
-/* Smooth neon pulse (dim → bright → dim) */
-@keyframes neonPulse {
-  0%, 100%   { opacity: 0.3; text-shadow: 0 0 5px rgba(60,255,160,0.2); }
-  50%        { opacity: 1; text-shadow: 0 0 20px rgba(60,255,160,0.5), 0 0 40px rgba(255,234,122,0.4); }
-}
-
-@keyframes alloyFlow {
-  0%   { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
+/* Each letter */
+h1 span:nth-child(1) { color: #4cffb0; }  /* neon green */
+h1 span:nth-child(2) { color: #6fa8ff; }  /* blue */
+h1 span:nth-child(3) { color: #ffd966; }  /* gold */
+h1 span:nth-child(4) { color: #ff6f91; }  /* pink/red */
+h1 span:nth-child(5) { color: #b48cff; }  /* purple */
+h1 span:nth-child(6) { color: #4cffb0; }
+h1 span:nth-child(7) { color: #6fa8ff; }
+h1 span:nth-child(8) { color: #ffd966; }
