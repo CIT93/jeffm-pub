@@ -1,40 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
-
-body {
+/* Reset */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+/* Page background */
+body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Comic Neue', cursive;
-  overflow: hidden;
-
-  /* Spiral background using radial gradient + rotation animation */
-  background: radial-gradient(circle at center, #4b0082, #0d1b5a);
-  background-size: 200% 200%;
-  animation: spiral 60s linear infinite;
+  background: linear-gradient(135deg, #001f3f, #005eff, #00ccff);
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
-/* H1: flashing neon letters */
+/* Main heading */
 h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  text-align: center;
-  color: #39ff14; /* initial neon green */
-  text-shadow: 0 0 12px #39ff14, 0 0 24px black;
-  animation: neonFlash 1s infinite alternate;
-  z-index: 10;
-}
-
-/* Spiral background movement */
-@keyframes spiral {
-  0% { background-position: 0% 0%; transform: rotate(0deg); }
-  100% { background-position: 200% 200%; transform: rotate(360deg); }
-}
-
-/* Neon green → brown flashing */
-@keyframes neonFlash {
-  0% { color: #39ff14; text-shadow: 0 0 12px #39ff14, 0 0 24px black; }
-  50% { color: #8B4513; text-shadow: 0 0 12px #8B4513, 0 0 24px #000000; }
-  100% { color: #39ff14; text-shadow: 0 0 12px #39ff14, 0 0 24px black; }
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00ffcc;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.6),
+    0 0 10px rgba(0, 255, 204, 0.7);
+  padding: 20px 40px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.3);
 }
