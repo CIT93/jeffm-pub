@@ -1,0 +1,130 @@
+/* ================================
+   PAGE BACKGROUND
+   ================================ */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 80px;
+
+    /* metallic green-blue gradient background */
+    background: linear-gradient(135deg, #0b3d2e, #1e7a5c, #0a2f4f);
+
+    color: #d9ffff;
+
+    /* subtle metallic glow */
+    text-shadow:
+        0 0 3px #00c8ff,
+        0 0 6px #00aaff;
+}
+
+
+/* ================================
+   TITLE
+   ================================ */
+
+h1 {
+
+    font-size: 36px;
+    padding: 20px;
+
+    border-radius: 12px;
+
+    /* metallic panel background */
+    background: linear-gradient(145deg, #0e4f38, #1e8b6a, #0e4f38);
+
+    border: 3px solid #00c8ff;
+
+    width: fit-content;
+
+    margin: auto;
+    margin-bottom: 40px;
+
+    /* 3D metallic shadow */
+    box-shadow:
+        5px 5px 12px rgba(0,0,0,0.6),
+        inset 0 0 10px rgba(0,200,255,0.5);
+}
+
+
+/* ================================
+   BUTTON STYLE
+   ================================ */
+
+button {
+
+    font-size: 18px;
+    padding: 14px 28px;
+
+    border-radius: 10px;
+
+    color: #d9ffff;
+
+    /* metallic blue-green button */
+    background: linear-gradient(145deg, #0a3f63, #1a7bb5, #0a3f63);
+
+    border: 3px solid #00d9ff;
+
+    cursor: pointer;
+
+    /* 3D button effect */
+    box-shadow:
+        0 6px #042c3f,
+        0 0 12px rgba(0,200,255,0.7);
+
+    transition: all 0.25s ease;
+}
+
+
+/* button hover glow */
+
+button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px #031f2e,
+        0 0 16px #00eaff;
+}
+
+
+/* button press effect */
+
+button:active {
+
+    transform: translateY(3px);
+
+    box-shadow:
+        0 2px #02141d;
+}
+
+
+/* ================================
+   TOTAL DISPLAY PANEL
+   ================================ */
+
+#total-display {
+
+    font-size: 26px;
+
+    margin-top: 40px;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    /* metallic green display panel */
+    background: linear-gradient(145deg, #104a32, #1d8a60, #104a32);
+
+    border: 3px solid #00c8ff;
+
+    width: fit-content;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    /* metallic inset glow */
+    box-shadow:
+        inset 0 0 10px rgba(0,200,255,0.6),
+        0 0 10px rgba(0,0,0,0.6);
+}
