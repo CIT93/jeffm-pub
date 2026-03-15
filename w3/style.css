@@ -1,130 +1,163 @@
-/* ================================
-   PAGE BACKGROUND
-   ================================ */
+/* -----------------------------
+   Page Layout
+------------------------------*/
 
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 80px;
 
-    /* metallic green-blue gradient background */
-    background: linear-gradient(135deg, #0b3d2e, #1e7a5c, #0a2f4f);
+    margin: 0;
+    padding: 30px;
 
-    color: #d9ffff;
+    /* Hunter green background */
+    background-color: #0b3d1a;
 
-    /* subtle metallic glow */
-    text-shadow:
-        0 0 3px #00c8ff,
-        0 0 6px #00aaff;
+    /* Comic style font */
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+
+    /* Larger text */
+    font-size: 20px;
+
+    /* Neon yellow text */
+    color: #f9ff00;
+
 }
 
 
-/* ================================
-   TITLE
-   ================================ */
+/* -----------------------------
+   Title
+------------------------------*/
 
 h1 {
 
     font-size: 36px;
-    padding: 20px;
 
-    border-radius: 12px;
+    color: #f9ff00;
 
-    /* metallic panel background */
-    background: linear-gradient(145deg, #0e4f38, #1e8b6a, #0e4f38);
+    text-shadow:
+        0 0 5px #f9ff00,
+        0 0 10px #f9ff00,
+        0 0 20px #f9ff00;
 
-    border: 3px solid #00c8ff;
-
-    width: fit-content;
-
-    margin: auto;
-    margin-bottom: 40px;
-
-    /* 3D metallic shadow */
-    box-shadow:
-        5px 5px 12px rgba(0,0,0,0.6),
-        inset 0 0 10px rgba(0,200,255,0.5);
 }
 
 
-/* ================================
-   BUTTON STYLE
-   ================================ */
+/* -----------------------------
+   Form Container
+------------------------------*/
 
-button {
+form {
 
-    font-size: 18px;
-    padding: 14px 28px;
+    margin-top: 20px;
+
+    padding: 25px;
+
+    width: 350px;
+
+    background-color: #145c2c;
 
     border-radius: 10px;
 
-    color: #d9ffff;
+    /* 3D box effect */
+    box-shadow:
+        6px 6px 12px #031a0a,
+        inset -2px -2px 5px #2c8c4c;
 
-    /* metallic blue-green button */
-    background: linear-gradient(145deg, #0a3f63, #1a7bb5, #0a3f63);
+}
 
-    border: 3px solid #00d9ff;
+
+/* -----------------------------
+   Labels
+------------------------------*/
+
+label {
+
+    display: block;
+    margin-bottom: 10px;
+
+}
+
+
+/* -----------------------------
+   Number Input
+------------------------------*/
+
+input[type="number"] {
+
+    margin-left: 10px;
+
+    padding: 5px;
+
+    font-size: 18px;
+
+    border-radius: 6px;
+    border: 2px solid #031a0a;
+
+}
+
+
+/* -----------------------------
+   Button
+------------------------------*/
+
+button {
+
+    margin-top: 10px;
+
+    padding: 10px 18px;
+
+    font-size: 20px;
+
+    background-color: #1f7a3d;
+
+    border: none;
+
+    border-radius: 8px;
+
+    color: #f9ff00;
 
     cursor: pointer;
 
     /* 3D button effect */
     box-shadow:
-        0 6px #042c3f,
-        0 0 12px rgba(0,200,255,0.7);
+        4px 4px 8px #000,
+        inset -2px -2px 5px #3aa65e;
 
-    transition: all 0.25s ease;
 }
 
 
-/* button hover glow */
+/* Button hover */
 
 button:hover {
 
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 
     box-shadow:
-        0 10px #031f2e,
-        0 0 16px #00eaff;
+        6px 6px 10px #000,
+        inset -2px -2px 6px #4ddc7a;
+
 }
 
 
-/* button press effect */
+/* -----------------------------
+   Order Summary Box
+------------------------------*/
 
-button:active {
+#order-summary {
 
-    transform: translateY(3px);
-
-    box-shadow:
-        0 2px #02141d;
-}
-
-
-/* ================================
-   TOTAL DISPLAY PANEL
-   ================================ */
-
-#total-display {
-
-    font-size: 26px;
-
-    margin-top: 40px;
+    margin-top: 25px;
 
     padding: 20px;
 
-    border-radius: 12px;
+    width: 350px;
 
-    /* metallic green display panel */
-    background: linear-gradient(145deg, #104a32, #1d8a60, #104a32);
+    background-color: #145c2c;
 
-    border: 3px solid #00c8ff;
+    border-radius: 10px;
 
-    width: fit-content;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    /* metallic inset glow */
+    /* 3D box effect */
     box-shadow:
-        inset 0 0 10px rgba(0,200,255,0.6),
-        0 0 10px rgba(0,0,0,0.6);
+        6px 6px 12px #031a0a,
+        inset -2px -2px 5px #2c8c4c;
+
+    font-size: 22px;
+
 }

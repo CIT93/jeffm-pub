@@ -1,53 +1,65 @@
 <!DOCTYPE html>
-<!-- Declares the document type as HTML5 adding notes  -->
-
 <html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
-<!-- Ensures characters and symbols display correctly -->
+<title>Custom T-Shirt Order</title>
 
-<title>Item Cost Tracker</title>
-<!-- Title shown in the browser tab -->
-
-<!-- Link to the external CSS stylesheet -->
 <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<body>
-    <h1>Custom T-Shirt Order</h1>
-    
-    <form id="order-form">
-        
-        <label>Quantity ($15 each): 
-            <input type="number" id="qty" value="1" min="1">
-        </label>
-        <br><br>
+<h1>Custom T-Shirt Order</h1>
 
-        <label>Size:</label>
-        <label><input type="radio" name="size" value="Small" checked> S</label>
-        <label><input type="radio" name="size" value="Medium"> M</label>
-        <label><input type="radio" name="size" value="Large"> L</label>
-        <br><br>
+<form id="order-form">
 
-        <label>
-            <input type="checkbox" id="gift-wrap"> Add Gift Wrap?
-        </label>
-        <br><br>
+<label>
+Quantity ($15 each):
+<input type="number" id="qty" value="1" min="1">
+</label>
 
-        <button type="submit">Place Order</button>
-    </form>
+<br><br>
 
-    <hr>
-    
-    <div id="order-summary">
-        <p>Order Details will appear here...</p>
-    </div>
+<label>Size:</label>
+
+<label>
+<input type="radio" name="size" value="Small" checked>
+Small
+</label>
+
+<label>
+<input type="radio" name="size" value="Medium">
+Medium
+</label>
+
+<label>
+<input type="radio" name="size" value="Large">
+Large
+</label>
+
+<br><br>
+
+<label>
+<input type="checkbox" id="gift-wrap">
+Add Gift Wrap
+</label>
+
+<br><br>
+
+<button type="submit">Place Order</button>
+
+</form>
+
+<hr>
+
+<div id="order-summary">
+<p>Order details will appear here...</p>
+</div>
+
+<script type="module" src="app.js"></script>
+
 </body>
-</body>
-
 </html>
